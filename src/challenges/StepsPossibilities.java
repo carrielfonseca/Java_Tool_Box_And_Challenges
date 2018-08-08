@@ -6,6 +6,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+// Inspired by https://www.youtube.com/watch?v=5o-kdjv7FD0&t=127s
+// Amazon challenge
+
 public class StepsPossibilities {
 	
 	private int numberOfSteps;
