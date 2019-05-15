@@ -14,7 +14,7 @@ public class Person implements Comparator<Person> {
 
 	private int age;
 
-	Person(String name, int age) {
+	public Person(String name, int age) {
 		this.name = name;
 		this.age = age;
 	}
