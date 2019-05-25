@@ -7,7 +7,7 @@ import auxiliary.Person;
 
 // https://docs.oracle.com/javase/tutorial/java/generics/upperBounded.html
 // https://docs.oracle.com/javase/tutorial/extra/generics/methods.html
-// challenge is when it goes as the argument of a method. The trick is that it never really goes in the new expression.
+// challenge for the wildcard is when it goes as the argument of a method. The trick is that it never really goes in the new expression.
 // The wildcard goes in the receiving end of the variable type
 
 

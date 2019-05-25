@@ -15,7 +15,6 @@ public class Lambdas {
 
 	public static void main(String[] args) {
 	
-		Animal an = new Dog();
 		// TODO Auto-generated method stub
 		Person p1 = new Person("Mike", 18);
 		Person p2 = new Person("Albert", 19);
@@ -38,10 +37,6 @@ public class Lambdas {
 			System.out.println(p.getName());
 		}
 		
-		System.out.println(p1.getClass().getName());
-		
-		Class<?> cl = p1.getClass();
-
 	}
 	
 	public List<Person> alo() {
@@ -53,6 +48,5 @@ public class Lambdas {
 		return obj;
 		
 	}
-
 	
 }
