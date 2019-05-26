@@ -13,9 +13,15 @@ import auxiliary.Person;
 
 // also interesting: https://howtodoinjava.com/java/generics/complete-java-generics-tutorial/
 
-public class Generics {
+public class Generics<R> {
 	
-	static List<Person> list = new ArrayList<>();	
+	static List<Person> list = new ArrayList<>();
+	
+	// need to cast it like this in order to make an array of parametrized types
+	// see https://docs.oracle.com/javase/tutorial/java/generics/restrictions.html#createArrays
+	// and https://algs4.cs.princeton.edu/41graph/Graph.java.html  (oncstructor)
+	List<String>[] arrayOfLists = (ArrayList<String>[]) new ArrayList[2];
+	// List<String>[] arrayOfListsWrong =  new ArrayList<String>[2]; this does not work
 
 	public static void main(String[] args) {	
 		// "A wildcard parameterized type is not a concrete type that could appear in a new expression."
@@ -63,5 +69,10 @@ public class Generics {
 	
 	public <T> void spitOut2(T obj) {
 		System.out.println(obj);		
-	}	
+	}
+	
+	// Generic R is already declared at the class level
+	public R spitOut3(R obj) {
+		return obj;		
+	}
 }
