@@ -1,0 +1,1 @@
+TestFabio outside bin folder
