@@ -21,14 +21,18 @@ import java.net.URL;
  * 4-) package names are part of the class. This class, for instance, is actually class toolbox.TextFileReadFromClassPath
  * 5-) On windows command line, classpath entries are separated by semi colons (this changes on different operating sytems)
  * 6-) Para incluir um jar pelo commange no classpath, precisa colocar o path ateh o jar, incluindo o arquivo com a extensa .jar 
+ * 
+ * Teste para testar que a ordem do classpth importa:
+ * 
+ *  Rode primeiro no eclipse a classe para que seja compilada e o arquico temp.txt seja incluido na pasta bin
+ *  Pelo command line, rode 
+    java -cp C:\Users\Fabio\workspace\ToolBoxAndChallenges;C:\Users\Fabio\workspace\ToolBoxAndChallenges\bin toolbox.TextFileReadFromClassPath
+    e depois
+    java -cp C:\Users\Fabio\workspace\ToolBoxAndChallenges\bin;C:\Users\Fabio\workspace\ToolBoxAndChallenges; toolbox.TextFileReadFromClassPath
  */
 
 public class TextFileReadFromClassPath {
 	 
-	private ClassLoader test() {
-		return getClass().getClassLoader(); 
-	}
-	   
 	public static void main(String[] args) throws IOException {
 		TextFileReadFromClassPath main = new TextFileReadFromClassPath();
         File file = main.getFileFromResources("temp.txt");   
