@@ -1,1 +1,1 @@
-TestFabioInSourceFolder
+TestFabio Inside Source Folder and Tranferred to bin folder
