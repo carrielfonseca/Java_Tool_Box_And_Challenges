@@ -4,23 +4,36 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.URL;
-import java.nio.charset.StandardCharsets;
 
-import org.apache.commons.io.IOUtils;
+
+/* to load from the classpath, see https://www.mkyong.com/java/java-read-a-file-from-resources-folder/
+ * Main Articles regarding classpath:
+ *  https://en.wikipedia.org/wiki/Classpath_(Java)
+ *  https://docs.oracle.com/javase/tutorial/essential/environment/paths.html
+ *  https://docs.oracle.com/javase/7/docs/technotes/tools/windows/classpath.html
+ * 
+ * 
+ * Key Points:
+ * 1-) ClassPath is not ONE path, but actually am array of paths
+ * 2-) The path before takes precedence over subsequent ones, so order matters
+ * 3-) Classes are specified until the root directory, with package name folders not being included
+ * 4-) package names are part of the class. This class, for instance, is actually class toolbox.TextFileReadFromClassPath
+ * 5-) On windows command line, classpath entries are separated by semi colons (this changes on different operating sytems)
+ * 6-) Para incluir um jar pelo commange no classpath, precisa colocar o path ateh o jar, incluindo o arquivo com a extensa .jar 
+ */
 
 public class TextFileReadFromClassPath {
-	
+	 
 	private ClassLoader test() {
-		return getClass().getClassLoader();
+		return getClass().getClassLoader(); 
 	}
-	
+	   
 	public static void main(String[] args) throws IOException {
 		TextFileReadFromClassPath main = new TextFileReadFromClassPath();
-        File file = main.getFileFromResources("temp.txt");
+        File file = main.getFileFromResources("temp.txt");   
         printFile(file); 
-	}
+	} 
 	     
 	// get file from classpath, resources folder
     private File getFileFromResources(String fileName) {
