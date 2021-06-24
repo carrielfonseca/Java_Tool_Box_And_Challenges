@@ -15,7 +15,7 @@ import java.net.URL;
  * 
  * 
  * Key Points:
- * 1-) ClassPath is not ONE path, but actually am array of paths
+ * 1-) ClassPath is not ONE path, but actually an array of paths
  * 2-) The path before takes precedence over subsequent ones, so order matters
  * 3-) Classes are specified until the root directory, with package name folders not being included
  * 4-) package names are part of the class. This class, for instance, is actually class toolbox.TextFileReadFromClassPath
