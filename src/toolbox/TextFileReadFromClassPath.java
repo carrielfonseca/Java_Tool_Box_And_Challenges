@@ -20,7 +20,7 @@ import java.net.URL;
  * 3-) Classes are specified until the root directory, with package name folders not being included
  * 4-) package names are part of the class. This class, for instance, is actually class toolbox.TextFileReadFromClassPath
  * 5-) On windows command line, classpath entries are separated by semi colons (this changes on different operating sytems)
- * 6-) Para incluir um jar pelo commange no classpath, precisa colocar o path ateh o jar, incluindo o arquivo com a extensa .jar 
+ * 6-) Para incluir um jar pelo commando no classpath, precisa colocar o path ateh o jar, incluindo o arquivo com a extensao .jar 
  * 
  * Teste para testar que a ordem do classpth importa:
  * 
