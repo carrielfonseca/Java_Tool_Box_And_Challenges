@@ -19,7 +19,7 @@ public class Generics<R> {
 	
 	// need to cast it like this in order to make an array of parametrized types
 	// see https://docs.oracle.com/javase/tutorial/java/generics/restrictions.html#createArrays
-	// and https://algs4.cs.princeton.edu/41graph/Graph.java.html  (oncstructor)
+	// and https://algs4.cs.princeton.edu/41graph/Graph.java.html  (on constructor)
 	List<String>[] arrayOfLists = (ArrayList<String>[]) new ArrayList[2];
 	// List<String>[] arrayOfListsWrong =  new ArrayList<String>[2]; this does not work
 
